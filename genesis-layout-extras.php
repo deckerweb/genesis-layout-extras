@@ -14,7 +14,7 @@
  * Plugin Name:  Genesis Layout Extras
  * Plugin URI:   https://github.com/deckerweb/genesis-layout-extras/
  * Description:  For Genesis Framework: Allows modifying of default layouts for homepage, various archive, attachment, search, 404 and even bbPress 2.x pages via plugin settings page. Plus: up to 9 alternate layout options as well as additional post type support!
- * Version:      2.0.0
+ * Version:      2.1.0
  * Author:       David Decker - DECKERWEB
  * Author URI:   https://deckerweb.de/
  * License:      GPL-2.0-or-later
@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 /** Plugin version */
-define( 'GLE_PLUGIN_VERSION', '2.0.0' );
+define( 'GLE_PLUGIN_VERSION', '2.1.0' );
 define( 'GLE_RELEASE_DATE', strtotime( '18 December 2018' ) );
 
 /** Plugin directory */

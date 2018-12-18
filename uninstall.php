@@ -68,7 +68,7 @@ if ( ! current_user_can( 'install_plugins' ) ) {
 function ddw_gle_delete_options() {
 
     /** Get plugin's options first */
-    $gle_settings = get_option( GLE_SETTINGS_FIELD );
+    $gle_settings = get_option( 'gle-settings' );
 
     /** Maybe delete all options */
     if ( $gle_settings[ 'gle_uninstall_delete_data' ] ) {
