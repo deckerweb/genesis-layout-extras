@@ -11,6 +11,8 @@
 
 For Genesis powered Sites: Allows modifying of default layouts for homepage, various archives, taxonomies, post types, attachment, search, 404 pages.
 
+[<img src="https://raw.githubusercontent.com/deckerweb/genesis-layout-extras/master/assets-repos/github-com/gle-banner.png" data-canonical-src="https://raw.githubusercontent.com/deckerweb/genesis-layout-extras/master/assets-repos/github-com/gle-banner.png" width="772" height="250" />](https://wordpress.org/plugins/genesis-layout-extras/)
+
 
 ## Description 
 
