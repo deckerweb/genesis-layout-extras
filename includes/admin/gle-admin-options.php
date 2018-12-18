@@ -484,7 +484,7 @@ class DDW_GLE_Plugin_Settings extends Genesis_Admin_Boxes {
 				</div>
 				<div class="gle-newsletter-button">
 					<?php echo sprintf(
-						'<a class="button button-secondary button-hero" href=%1$s" target="_blank" rel="noopener noreferrer">%2$s</a>',
+						'<a class="button button-secondary button-hero" href="%1$s" target="_blank" rel="noopener noreferrer">%2$s</a>',
 						ddw_gle_get_info_url( 'url_newsletter' ),
 						__( 'Join my Newsletter Now!', 'genesis-layout-extras' )
 					); ?>
