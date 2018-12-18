@@ -285,7 +285,7 @@ add_action( 'genesis_init', 'ddw_gle_admin_init', 11 );
 function ddw_gle_admin_init() {
 
 	/** Load the settings & help stuff */
-	if ( is_admin() && ddw_gle_is_genesis_active() ) {
+	if ( is_admin() ) {
 		require_once( GLE_PLUGIN_DIR . 'includes/admin/gle-admin-options.php' );
 	}
 

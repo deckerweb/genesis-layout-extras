@@ -36,7 +36,7 @@ function ddw_gle_maybe_unload_translations( $mofile, $domain ) {
 	$gle_settings = get_option( GLE_SETTINGS_FIELD );
 
 	/** Bail early if unloading not wanted */
-	if ( ! $gle_settings[ 'gle_unload_translations' ] ) {
+	if ( ! isset( $gle_settings[ 'gle_unload_translations' ] ) || ! $gle_settings[ 'gle_unload_translations' ] ) {
 		return $mofile;
 	}
 
