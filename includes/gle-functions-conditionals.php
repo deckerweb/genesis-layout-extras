@@ -124,6 +124,20 @@ function ddw_gle_is_genesis_prose_extras_active() {
  */
 
 /**
+ * Is Genesis get option function available or not?
+ *
+ * @since 2.1.0
+ *
+ * @return bool TRUE if function is available, FALSE otherwise.
+ */
+function ddw_gle_is_genesis_active() {
+
+	return function_exists( 'genesis_get_option' );
+
+}  // end function
+
+
+/**
  * Is Genesis Admin CPT Archive Settings class available or not?
  *
  * @since 2.1.0

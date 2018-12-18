@@ -217,6 +217,8 @@ add_action( 'init', 'ddw_genesis_layout_extras_init', 1 );
  * 
  * @since 1.0.0
  * @since 2.1.0 Tweaked and improved.
+ *
+ * @uses  ddw_gle_is_genesis_active()
  */
 function ddw_genesis_layout_extras_init() {
 
@@ -239,7 +241,7 @@ function ddw_genesis_layout_extras_init() {
 	require_once( GLE_PLUGIN_DIR . 'includes/gle-layout-extras.php' );
 
 	/** Load admin and frontend functions only when needed */
-	if ( is_admin() ) {
+	if ( is_admin() && ddw_gle_is_genesis_active() ) {
 		
 		/** Include plugin code parts */
 		require_once( GLE_PLUGIN_DIR . 'includes/admin/gle-admin-functions.php' );
@@ -247,7 +249,7 @@ function ddw_genesis_layout_extras_init() {
 		require_once( GLE_PLUGIN_DIR . 'includes/admin/gle-admin-extras.php' );
 		require_once( GLE_PLUGIN_DIR . 'includes/admin/views/gle-admin-help.php' );
 
-	} elseif ( function_exists( 'genesis_get_option' ) ) {
+	} elseif ( ddw_gle_is_genesis_active() ) {
 
 		/** This executes our settings visually */
 		require_once( GLE_PLUGIN_DIR . 'includes/gle-frontend.php' );
@@ -283,7 +285,7 @@ add_action( 'genesis_init', 'ddw_gle_admin_init', 11 );
 function ddw_gle_admin_init() {
 
 	/** Load the settings & help stuff */
-	if ( is_admin() ) {
+	if ( is_admin() && ddw_gle_is_genesis_active() ) {
 		require_once( GLE_PLUGIN_DIR . 'includes/admin/gle-admin-options.php' );
 	}
 

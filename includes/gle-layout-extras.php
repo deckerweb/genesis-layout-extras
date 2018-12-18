@@ -18,10 +18,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since  2.0.0
  *
- * @param  string 	$gle_sidebar
- *
  * @global mixed $GLOBALS[ 'wp_registered_sidebars' ]
  *
+ * @param  string $gle_sidebar
  * @return bool TRUE if 'Sidebar-Alt' exists (registered), otherwise FALSE.
  */
 function ddw_gle_core_sidebars_exists( $gle_sidebar ) {
@@ -50,7 +49,8 @@ add_action( 'init', 'ddw_gle_register_additional_layouts' );
  * @since  2.0.0
  *
  * @uses   ddw_gle_core_sidebars_exists()
- * @uses   genesis_get_option()
+ * @uses   ddw_gle_is_genesis_active()
+ * @uses   ddw_gle_is_genesis_prose_extras_active()
  * @uses   genesis_register_layout()
  */
 function ddw_gle_register_additional_layouts() {
@@ -63,8 +63,8 @@ function ddw_gle_register_additional_layouts() {
 		 */
 
 		/** Layout: Sidebars below Content (SBC) (like a special "Full-Width-Content" flavor :) */
-		if ( ( function_exists( 'genesis_get_option' ) && genesis_get_option( 'gle_layout_sbc', GLE_SETTINGS_FIELD ) )
-			&& ! defined( 'GPEX_PLUGIN_BASEDIR' )
+		if ( ( ddw_gle_is_genesis_active() && genesis_get_option( 'gle_layout_sbc', GLE_SETTINGS_FIELD ) )
+			&& ! ddw_gle_is_genesis_prose_extras_active()
 		) {
 
 			genesis_register_layout( 'sidebars-below-content', array(
@@ -75,7 +75,7 @@ function ddw_gle_register_additional_layouts() {
 		}  // end-if settings check
 
 		/** Layout: Primary below Content (PBC) */
-		if ( function_exists( 'genesis_get_option' ) && genesis_get_option( 'gle_layout_pbc', GLE_SETTINGS_FIELD ) ) {
+		if ( ddw_gle_is_genesis_active() && genesis_get_option( 'gle_layout_pbc', GLE_SETTINGS_FIELD ) ) {
 
 			genesis_register_layout( 'primary-below-content', array(
 				'label' => __( 'Primary below Content', 'genesis-layout-extras' ),
@@ -85,7 +85,7 @@ function ddw_gle_register_additional_layouts() {
 		}  // end-if settings check
 
 		/** Layout: Primary above Content (PAC) */
-		if ( function_exists( 'genesis_get_option' ) && genesis_get_option( 'gle_layout_pac', GLE_SETTINGS_FIELD ) ) {
+		if ( ddw_gle_is_genesis_active() && genesis_get_option( 'gle_layout_pac', GLE_SETTINGS_FIELD ) ) {
 
 			genesis_register_layout( 'primary-above-content', array(
 				'label' => __( 'Primary above Content', 'genesis-layout-extras' ),
@@ -96,7 +96,7 @@ function ddw_gle_register_additional_layouts() {
 
 		/** Layout: Header+Nav/Content/Sidebar (HNCS) */
 		if ( ! GLE_NO_HNCS_LAYOUT_OPTION
-			&& ( function_exists( 'genesis_get_option' ) && genesis_get_option( 'gle_layout_hncs', GLE_SETTINGS_FIELD ) )
+			&& ( ddw_gle_is_genesis_active() && genesis_get_option( 'gle_layout_hncs', GLE_SETTINGS_FIELD ) )
 		) {
 
 			genesis_register_layout( 'headernav-content-sidebar', array(
@@ -112,8 +112,8 @@ function ddw_gle_register_additional_layouts() {
 		 */
 
 		/** Layout: Content/Sidebar-Alt (CSA) (like a special "Content-Sidebar" flavor :) */
-		if ( ( function_exists( 'genesis_get_option' ) && genesis_get_option( 'gle_layout_c_salt', GLE_SETTINGS_FIELD ) )
-			&& ! defined( 'GPEX_PLUGIN_BASEDIR' )
+		if ( ( ddw_gle_is_genesis_active() && genesis_get_option( 'gle_layout_c_salt', GLE_SETTINGS_FIELD ) )
+			&& ! ddw_gle_is_genesis_prose_extras_active()
 		) {
 
 			genesis_register_layout( 'content-sidebaralt', array(
@@ -124,8 +124,8 @@ function ddw_gle_register_additional_layouts() {
 		}  // end-if settings check
 
 		/** Layout: Sidebar-Alt/Content (SAC) (like a special "Sidebar-Content" flavor :) */
-		if ( ( function_exists( 'genesis_get_option' ) && genesis_get_option( 'gle_layout_salt_c', GLE_SETTINGS_FIELD ) )
-			&& ! defined( 'GPEX_PLUGIN_BASEDIR' )
+		if ( ( ddw_gle_is_genesis_active() && genesis_get_option( 'gle_layout_salt_c', GLE_SETTINGS_FIELD ) )
+			&& ! ddw_gle_is_genesis_prose_extras_active()
 		) {
 
 			genesis_register_layout( 'sidebaralt-content', array(
@@ -141,7 +141,7 @@ function ddw_gle_register_additional_layouts() {
 		 */
 
 		/** Layout: Content/Sidebar-Alt/Sidebar (CSAS) (like a special "Content-Sidebar-Sidebar" flavor :) */
-		if ( function_exists( 'genesis_get_option' ) && genesis_get_option( 'gle_layout_c_salt_s', GLE_SETTINGS_FIELD ) ) {
+		if ( ddw_gle_is_genesis_active() && genesis_get_option( 'gle_layout_c_salt_s', GLE_SETTINGS_FIELD ) ) {
 
 			genesis_register_layout( 'content-sidebaralt-sidebar', array(
 				'label' => __( 'Content/Sidebar-Alt/Sidebar', 'genesis-layout-extras' ),
@@ -151,7 +151,7 @@ function ddw_gle_register_additional_layouts() {
 		}  // end-if settings check
 
 		/** Layout: Sidebar/Sidebar-Alt/Content (SSAC) (like a special "Sidebar-Sidebar-Content" flavor :) */
-		if ( function_exists( 'genesis_get_option' ) && genesis_get_option( 'gle_layout_s_salt_c', GLE_SETTINGS_FIELD ) ) {
+		if ( ddw_gle_is_genesis_active() && genesis_get_option( 'gle_layout_s_salt_c', GLE_SETTINGS_FIELD ) ) {
 
 			genesis_register_layout( 'sidebar-sidebaralt-content', array(
 				'label' => __( 'Sidebar/Sidebar-Alt/Content', 'genesis-layout-extras' ),
@@ -161,7 +161,7 @@ function ddw_gle_register_additional_layouts() {
 		}  // end-if settings check
 
 		/** Layout: Sidebar/Content/Sidebar-Alt (SCSA) (like a special "Sidebar-Content-Sidebar" flavor :) */
-		if ( function_exists( 'genesis_get_option' ) && genesis_get_option( 'gle_layout_s_c_salt', GLE_SETTINGS_FIELD ) ) {
+		if ( ddw_gle_is_genesis_active() && genesis_get_option( 'gle_layout_s_c_salt', GLE_SETTINGS_FIELD ) ) {
 
 			genesis_register_layout( 'sidebar-content-sidebaralt', array(
 				'label' => __( 'Sidebar/Content/Sidebar-Alt', 'genesis-layout-extras' ),
