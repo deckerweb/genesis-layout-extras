@@ -1,0 +1,72 @@
+/**
+ * // assets/css/gle-layout-sbc-html5-styles
+ * @package Genesis Layout Extras - Assets
+ * @since   2.0.0
+ */
+
+/**
+ * Table of Contents
+ *
+ * Additional Layout: Sidebars below Content
+ * Responsive Design (Media Queries)
+ */
+
+
+/* Additional Layout: Sidebars below Content
+------------------------------------------------------------ */
+
+/* Content */
+.sidebars-below-content .content-sidebar-wrap {
+	float: none;
+	min-width: 98%;
+	max-width: 100%;
+	/* width: 100%; */
+}
+
+.sidebars-below-content .content {
+	width: 98%;
+}
+
+
+/* .sidebars-below-content .content {
+	float: none;
+	min-width: 98%;
+	max-width: 100%;
+	width: 100%;
+} */
+
+/* Sidebars below Content */
+.gle-sidebars-below-content > .one-half.second {
+	float: right;
+}
+
+.gle-sidebars-below-content > .one-half.first {
+	float: left;
+}
+
+.gle-sidebars-below-content .first {
+	clear: none;
+}
+
+.gle-sidebars-below-content .sidebar-primary,
+.gle-sidebars-below-content .sidebar-secondary {
+	width: 100%;
+}
+
+
+/* Responsive Design (Media Queries)
+------------------------------------------------------------ */
+
+@media only screen and (max-width: 320px) {
+
+	.gle-columns.one-half {
+		float: none;
+		width: 100%;
+	}
+
+	.gle-sidebars-below-content > .one-half.first,
+	.gle-sidebars-below-content > .one-half.second {
+		float: none;
+	}
+
+}

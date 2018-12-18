@@ -1,0 +1,59 @@
+/**
+ * // assets/css/gle-layout-2col-styles
+ * @package Genesis Layout Extras - Assets
+ * @since   2.0.0
+ */
+
+/**
+ * Table of Contents
+ *
+ * Additional Layouts: CSA & SAC
+ * Responsive Design (Media Queries)
+ */
+
+
+/* Additional Layouts: CSA & SAC
+------------------------------------------------------------ */
+
+/* Content-Sidebar Wrapper */
+.content-sidebaralt #content-sidebar-wrap,
+.sidebaralt-content #content-sidebar-wrap {
+	width: 77%;
+}
+
+.sidebaralt-content #content-sidebar-wrap {
+	float: right;
+}
+
+/* Sidebar-Alt */
+.content-sidebaralt #sidebar-alt,
+.sidebaralt-content #sidebar-alt {
+	width: 19%;
+}
+
+.content-sidebaralt #sidebar-alt {
+	float: right;
+}
+
+/* Content */
+.content-sidebaralt #content,
+.sidebaralt-content #content {
+	width: 100%;
+}
+
+.sidebaralt-content #content {
+	float: right;
+}
+
+
+/* Responsive Design (Media Queries)
+------------------------------------------------------------ */
+
+@media only screen and (max-width: 768px) {
+
+	.content-sidebaralt #content,
+	.sidebaralt-content #content {
+		width: 100%;
+	}
+
+}

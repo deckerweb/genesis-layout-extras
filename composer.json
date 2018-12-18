@@ -1,0 +1,22 @@
+{
+  "name": "deckerweb/genesis-layout-extras",
+  "description": "WordPress plugin: For Genesis Framework: Allows modifying of default layouts for homepage, various archive, attachment, search, 404 and even bbPress 2.x pages via plugin settings page. Plus: up to 9 alternate layout options as well as additional post type support!",
+  "keywords": ["genesis", "genesiswp", "genesis framework", "layout", "layouts", "layout manager", "post", "page", "singular", "attachment", "search", "taxonomoy", "404 error", "404 page", "bbPress", "deckerweb"],
+  "type": "wordpress-plugin",
+  "homepage": "https://github.com/deckerweb/genesis-layout-extras",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "David Decker",
+      "homepage": "https://deckerweb.de/",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "issues": "https://github.com/deckerweb/genesis-layout-extras/issues",
+    "source": "https://github.com/deckerweb/genesis-layout-extras"
+  },
+  "require": {
+    "php": ">=5.6"
+  }
+}

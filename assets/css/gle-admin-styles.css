@@ -1,0 +1,374 @@
+/**
+ * // assets/css/gle-admin-styles
+ * @package Genesis Layout Extras - Assets
+ * @since   2.0.0
+ * @since   2.1.0 Tweaks and enhancements.
+ */
+
+/**
+ * Table of Contents
+ *
+ * Genesis Meta Boxes
+ * Genesis Layout Extras: Admin Settings
+ * Genesis Layout Extras: Additional Layouts
+ * Genesis Layout Extras: Layout Help
+ * Plugin Recommendations
+ * Media Queries
+ */
+
+
+/* Genesis Meta Boxes 
+------------------------------------------------------------ */
+
+/* pre G2.0 */
+.gle-pre-g200 .genesis-metaboxes {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 690px !important;
+}
+
+.gle-pre-g200 .genesis-metaboxes .metabox-holder {
+	width: 690px !important;
+}
+
+.genesis-metaboxes .inside {
+	margin-bottom: 30px;
+    padding: 0 15px !important;
+}
+
+hr.div {
+	margin: 30px 0 !important;
+}
+
+p .description {
+	display: inline-block;
+	margin-left: 15px;
+}
+
+.metabox-holder h2.hndle {
+	background-color: #fafafa;
+	font-size: 15px;
+	padding: 12px 13px;
+}
+
+.metabox-holder h2.hndle .dashicons:before {
+	color: #7e49c2;  /* #72777c; */
+	/* margin-right: 5px; */
+}
+
+.metabox-holder h2.hndle .dashicons.gle-icon {
+	margin-right: 5px;
+}
+
+.inside h4 {
+	font-size: 1.07em;
+}
+
+
+/* Screen Options */
+
+#screen-options-wrap .dashicons:before {
+	color: #72777c;
+	display: inline-block;
+	font-size: 18px;
+	margin-right: 3px;
+	margin-top: 6px;
+}
+
+
+/* Genesis Layout Extras: Admin Settings
+------------------------------------------------------------ */
+
+#gle-plugin-information ul {
+	font-weight: 500;
+	list-style: none;
+	margin-left: 25px;
+}
+
+#gle-plugin-information ul li {
+	margin-bottom: 15px;
+}
+
+#gle-plugin-information ul a {
+	text-decoration: none; 
+}
+
+.gle-dropdown {
+	padding: 3px 10px;
+}
+
+.gle-dropdown-void {
+	font-style: italic;
+	padding: 3px 10px;
+}
+
+.gle-admin-icon {
+	border-radius: 3px;
+	clear: left;
+	display: inline-block;
+	float: left;
+	margin-bottom: 15px;
+	margin-right: 20px;
+}
+
+a button.button {
+	text-decoration: none;
+}
+
+
+/* Newsletter */
+
+.gle-newsletter {
+	background: rgb(49,35,174);
+	background: linear-gradient(108deg, rgba(49,35,174,0.77) 0%, rgba(196,107,214,0.77) 100%, rgba(197,108,214,1) 100%);
+	border-radius: 3px;
+	margin-bottom: 40px;
+	margin-top: 40px;
+	padding: 30px 60px;
+}
+
+.gle-newsletter:hover {
+	background: rgb(49,35,174);
+	background: linear-gradient(108deg, rgba(49,35,174,0.88) 0%, rgba(196,107,214,0.88) 100%, rgba(197,108,214,1) 100%);
+}
+
+.gle-newsletter,
+.gle-newsletter h3 {
+	color: #fff;
+}
+
+.gle-newsletter-icon {
+	clear: right;
+	float: right;
+	margin-top: -30px;
+}
+
+.gle-newsletter-icon a {
+	color: #eaeaea;
+	text-decoration: none;
+}
+
+.gle-newsletter-icon .dashicons {
+	display: inline;
+	font-size: 172px;
+	padding: 40px;
+}
+
+.gle-newsletter-button {
+	font-weight: 700;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.gle-newsletter-button a {
+	color: #7e49c2 !important;
+}
+
+
+/* Help tabs */
+
+.help-tab-content h3 {
+	color: #7e49c2;
+}
+
+.gle-help-version {
+	opacity: .77;
+}
+
+.gle-help-sidebar-icons:before {
+	margin-right: 4px;
+	text-decoration: none !important;
+}
+
+.gle-help-notice.dashicons-info:before {
+	clear: left;
+	float: left;
+	font-size: 20px;
+	margin-right: 10px !important;
+	margin-top: 3px;
+	opacity: .77;
+}
+
+.gle-help-notice {
+	margin-left: 9px;
+	padding: 5px 10px;
+}
+
+.gle.dashicons-awards:before,
+.gle.dashicons-thumbs-up:before {
+	margin-top: 3px;
+}
+
+
+/* Genesis Layout Extras: Additional Layouts
+------------------------------------------------------------ */
+
+.gle-add-layouts {
+	display: inline-block;
+	padding-top: 10px;
+}
+
+.gle-add-layouts label.box {
+	color: #666;
+	display: block;
+	float: left;
+	font-size: .8em;
+	text-align: center;
+	max-width: 100px;
+}
+
+.gle-add-layouts label.box {
+	padding: 0 4px 10px;
+	word-wrap: break-word;
+	min-height: 150px;
+}
+
+.gle-add-layouts label.box img {
+	border: 3px solid transparent;
+	margin-top: 5px;
+	max-width: 85px;
+}
+
+.gle-add-layouts label.box img:hover,
+.gle-add-layouts input[type='checkbox']:checked + img {
+	border: 3px solid #ccc !important;
+}
+
+.gle-add-layouts label > input[type='checkbox']:checked {
+	font-weight: bold !important;
+}
+
+.gle-add-layouts input[type='checkbox']:checked + img + br + div {
+	font-weight: bold;
+}
+
+.gle-add-layouts .gle-checkbox {
+	display: inline-block;
+	max-width: 100px;
+}
+
+
+/* Genesis Layout Extras: Layout Help
+------------------------------------------------------------ */
+
+.gle-layout-div {
+	display: inline-block;
+	padding: 5px 10px;
+	width: 100%;
+}
+
+#tab-panel-gle-layout-extras-help .gle-layout-div:first-child {
+	margin-top: 10px;
+}
+
+.gle-layout-div:hover {
+	background-color: #f5f5f5;
+}
+
+.gle-layout-img {
+	padding-right: 10px;
+	max-width: 85px;
+}
+
+.gle-layout-div span {
+	display: block;
+	margin-top: 10px;
+}
+
+
+/* Deprecated message */
+
+.gle-deprecated {
+	/* background-color: rgba(255, 255, 204, 0.35); */  /* #ffc; */
+	border-radius: 3px;
+	display: block;
+	line-height: 1.625em;
+	padding: 10px 20px;
+}
+
+.gle-deprecated-icon {
+	color: #f00;
+	clear: left;
+	float: left;
+	font-size: 36px;
+}
+
+.gle-deprecated-title {
+	font-size: 1.1em;
+	font-weight: 600;
+}
+
+.gle-deprecated-title,
+.gle-deprecated-message {
+	margin-left: 60px;
+}
+
+
+/* Plugin Recommendations
+------------------------------------------------------------ */
+
+.gle-plugin-tips {
+	display: inline-block;
+}
+
+.gle-plugin-tips-item {
+	float: left;
+	padding: 10px 20px;
+	text-align: center;
+}
+
+.gle-plugin-tips-item img {
+	border: 5px solid transparent;
+	border-radius: 3px;
+	opacity: .98;
+	text-decoration: none;
+}
+
+.gle-plugin-tips-item:hover img,
+.gle-plugin-tips-item img:hover {
+	border: 5px solid #ccc;
+}
+
+.gle-plugin-tips-item:hover img,
+.gle-plugin-tips-item img:hover {
+	opacity: 1;
+}
+
+.gle-plugin-tips-item button span:before {
+	display: block;
+	margin-top: 4px;
+}
+
+.gle-plugin-tips-item a button {
+	margin-left: 4px !important;
+	margin-right: 4px !important;
+}
+
+
+/* Media Queries
+------------------------------------------------------------ */
+
+@media only screen and (max-width: 420px) {
+
+	
+	.gle-newsletter {
+		padding: 15px 30px;
+	}
+
+	.gle-newsletter-icon {
+		clear: both;
+		float: none;
+		margin-bottom: -20px;
+		margin-top: -20px;
+	}
+
+}
+
+@media only screen and (max-width: 350px) {
+
+	.gle-newsletter {
+		padding: 7px 15px;
+	}
+
+}
