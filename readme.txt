@@ -5,7 +5,7 @@ Tags: genesis, genesiswp, genesis framework, layout, layouts, layout manager, po
 Requires at least: 3.4 plus Genesis 1.8+
 Tested up to: 5.0
 Requires PHP: 5.6
-Stable tag: 2.1.0
+Stable tag: 2.1.1
 License: GPL-2.0-or-later
 License URI: https://opensource.org/licenses/GPL-2.0
 
@@ -373,6 +373,11 @@ Last but not least, **Special Thanks go out to my family** for allowing me to do
 
 **NOTE for the extra Layouts** The up to nine *additional* layouts added with version 2.0.0 of the plugin back in 2013 are now deprecated as of December 2018. That means, they will NOT receive any more updates and also NO SUPPORT. You can still use them if you want but you need to care for the proper styling, displaying etc. yourself. Therefore it would make more sense for you to not use these option from the plugin but rather register custom layouts yourself and make use of our filters to bring them also into the settings drop-down field. Thanks for your understanding! - This note only regards the *additional layouts*, NOT the plugin itself of course, the plugin is alive and kickin', hehe :-).
 
+= 🔧 2.1.1 - 2018-12-19 =
+* Tweak: Fixed Fatal error caused from setting field creation function - thanks to user Pete for reporting it!
+* Tweak: Fixed Admin styling glitches with Ninja Forms builder (and most likely other plugins) - Thanks to user feedback ([Topic](https://wordpress.org/support/topic/css-error-when-combined-with-ninja-forms/))
+
+
 = 🎉 2.1.0 - 2018-12-18 =
 * ***New: Brought the plugin back to life after more than five years, yeah! :)***
 * New: Added plugin support for "Genesis Portfolio Pro" (free, by StudioPress)
@@ -395,7 +400,6 @@ Last but not least, **Special Thanks go out to my family** for allowing me to do
 * Tweak: Updated `.pot` file plus all German translations (formal, informal) and German language packs
 * Tweak: Removed all non-German translations from the plugin package, as those are already [powered by WordPress.org language packs](https://translate.wordpress.org/projects/wp-plugins/genesis-layout-extras) - the German translation files now serve as an example for community translators
 * Tweak: Overhauled and corrected Readme.txt file here
-* Tweak: All new screenshots - plus some more ;-)
 * Tweak: Added new plugin icon and banner on WordPress.org
 * *Trivia fact: this plugin is already 7 (seven!) years old. Whoa, that's a lot. ;-)*
 
@@ -517,6 +521,9 @@ NEW: Added support for more custom post type by plugins:
 * Tested & proved compatibility with WordPress 3.3-aortic-dissection :-)
 
 == Upgrade Notice ==
+
+= 2.1.1 =
+Major release: **Back in life :-)** - 3 new Genesis-plugins supported. Lots of improvements, tweaks and fixes. - **Update highly recommended!**
 
 = 2.1.0 =
 Major release: **Back in life :-)** - 3 new Genesis-plugins supported. Lots of improvements, tweaks and fixes. - **Update highly recommended!**

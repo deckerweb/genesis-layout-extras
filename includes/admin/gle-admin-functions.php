@@ -131,6 +131,8 @@ function ddw_gle_layout_select_option( $layout_type, $layout_title, $gle_styles_
  */
 function ddw_genesis_layout_extras_option( $gle_layout_title, $gle_layout_option ) {
 
+	//$has_alternate_layouts = ddw_gle_is_alternate_layout_registered() ? TRUE : FALSE;
+
 	/** Begin form code */
 	?>
 
@@ -676,6 +678,8 @@ add_filter( 'admin_body_class', 'ddw_gle_admin_body_class', 10, 1 );
  *
  * @since  2.0.0
  *
+ * @uses   ddw_gle_is_genesis_cpt_archive_settings_available()
+ *
  * @return string Strings of admin body classes.
  */
 function ddw_gle_admin_body_class( $classes ) {
@@ -687,10 +691,13 @@ function ddw_gle_admin_body_class( $classes ) {
 
 	/** Add admin body class */
 	if ( genesis_is_menu_page( 'gle-layout-extras' )
-		&& ! class_exists( 'Genesis_Admin_CPT_Archive_Settings' )
+		&& ! ddw_gle_is_genesis_cpt_archive_settings_available()
 	) {
     	return $classes . ' gle-pre-g200';
     }
+
+    /** Return the default */
+    return $classes;
 
 }  // end function
 
@@ -699,13 +706,12 @@ function ddw_gle_admin_body_class( $classes ) {
  * Check if any of our nine alternate layout options are currently registered in
  *   Genesis Layouts.
  *
- * @link   https://stackoverflow.com/questions/7542694/in-array-multiple-values
- *
  * @since  2.1.0
+ * @since  2.1.1 Fixed, simplified and reworked the logic.
  *
  * @see    ddw_genesis_layout_extras_option()
  *
- * @uses   genesis_get_layouts()
+ * @uses   genesis_get_layout()
  *
  * @return bool TRUE if any of our alternate layouts is currently registered in
  *              Genesis Layouts, FALSE otherwise.
@@ -725,14 +731,25 @@ function ddw_gle_is_alternate_layout_registered() {
 		'sidebar-content-sidebaralt',
 	);
 
-	/** All current Genesis layouts */
-	$genesis_layouts = array_keys( genesis_get_layouts() );
+	/** Set default */
+	$layout_check = FALSE;
+
+	/** Loop through all alternate layouts */
+	foreach ( $gle_alternate_layouts as $alternate_layout ) {
+
+		if ( is_array( genesis_get_layout( $alternate_layout ) ) ) {
+			$layout_check = TRUE;
+			break;
+		}
+
+	}  // end foreach
 
 	/**
-	 * needles - $gle_alternate_layouts
-	 * haystack - $genesis_layouts (keys of genesis_get_layouts())
+	 * Return the layout check boolean:
+	 *  - TRUE if any alternate layout registered (means array of reg. layouts)
+	 *  - FALSE otherwise (means no array of reg. layouts)
 	 */
-	return ! empty( array_intersect( $gle_alternate_layouts, $genesis_layouts ) );
+	return $layout_check;
 
 }  // end function
 

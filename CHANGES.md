@@ -12,6 +12,12 @@
 
 ## Changelog of the Plugin
 
+### 🔧 2.1.1 - 2018-12-19
+
+* Tweak: Fixed Fatal error caused from setting field creation function - thanks to user Pete for reporting it!
+* Tweak: Fixed Admin styling glitches with Ninja Forms builder (and most likely other plugins) - Thanks to user feedback ([Topic](https://wordpress.org/support/topic/css-error-when-combined-with-ninja-forms/))
+
+
 ### 🎉 2.1.0 - 2018-12-18
 
 * ***New: Brought the plugin back to life after more than five years, yeah! :)***
