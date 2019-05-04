@@ -4,6 +4,7 @@
 
 * [Plugin page on WordPress.org: wordpress.org/plugins/genesis-layout-extras/](https://wordpress.org/plugins/genesis-layout-extras/)
 * [Translate the plugin](https://translate.wordpress.org/projects/wp-plugins/genesis-layout-extras)
+* [**Join plugin's newsletter for insider info, tutorials and more**](https://eepurl.com/gbAUUn)
 * [**Donate** for the further development & support of the plugin](https://www.paypal.me/deckerweb)
 * [Plugin's documentation & FAQ](https://wordpress.org/plugins/genesis-layout-extras/#faq)
 * [Facebook Community User Group](https://www.facebook.com/groups/deckerweb.wordpress.plugins/)
@@ -11,6 +12,15 @@
 
 
 ## Changelog of the Plugin
+
+### ⚡️ 2.1.2 - 2019-05-03
+
+* *New: Successfully tested with WordPress 5.2*
+* New: Integrated with WordPress 5.2+ new Site Health feature: Genesis Layout Extras now has an extra section on the Debug Info tab - this is especially helpful for support requests
+* Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.4.0) - feature updates
+* Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
+* New: [Join my newsletter for DECKERWEB WordPress Plugins](https://eepurl.com/gbAUUn) - insider info, plus tutorials and more useful stuff
+
 
 ### 🔧 2.1.1 - 2018-12-19
 

@@ -3,14 +3,14 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Genesis Layout Extras\n"
-"POT-Creation-Date: 2018-12-18 17:31+0100\n"
+"POT-Creation-Date: 2019-05-03 22:27+0200\n"
 "PO-Revision-Date: 2018-12-17 15:25+0100\n"
 "Last-Translator: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
 "Language-Team: David Decker DECKERWEB.de -- https://deckerweb.de/\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2\n"
+"X-Generator: Poedit 2.2.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: genesis-layout-extras.php\n"
@@ -50,7 +50,8 @@ msgstr ""
 #. Plugin Name of the plugin/theme
 #: genesis-layout-extras.php:181 genesis-layout-extras.php:186
 #: genesis-layout-extras.php:205 includes/admin/gle-admin-extras.php:138
-#: includes/admin/gle-admin-functions.php:392
+#: includes/admin/gle-admin-extras.php:165
+#: includes/admin/gle-admin-functions.php:394
 #: includes/admin/gle-admin-options.php:56
 #: includes/admin/gle-admin-options.php:442
 #: includes/admin/gle-admin-options.php:479
@@ -127,61 +128,111 @@ msgid ""
 "Enjoyed %1$s? Please leave us a %2$s. We really appreciate your support!"
 msgstr ""
 
-#: includes/admin/gle-admin-extras.php:358
+#: includes/admin/gle-admin-extras.php:165
+#: includes/admin/gle-admin-functions.php:394
+#: includes/admin/views/gle-admin-help.php:115
+msgid "Plugin"
+msgstr ""
+
+#: includes/admin/gle-admin-extras.php:168
+msgid "Plugin version"
+msgstr ""
+
+#: includes/admin/gle-admin-extras.php:172
+msgid "Genesis Default Layout"
+msgstr ""
+
+#: includes/admin/gle-admin-extras.php:239
+msgid "Genesis Plugins from the Plugin Directory"
+msgstr ""
+
+#: includes/admin/gle-admin-extras.php:240
+msgid "Genesis Plugins"
+msgstr ""
+
+#: includes/admin/gle-admin-extras.php:460
 msgctxt "Plugin installer: Tab name in installer toolbar"
 msgid "Newest"
 msgstr ""
 
-#: includes/admin/gle-admin-extras.php:364
+#: includes/admin/gle-admin-extras.php:466
 msgctxt "Plugin card: plugin version"
 msgid "Version:"
 msgstr ""
 
-#: includes/admin/gle-admin-functions.php:145
+#: includes/admin/gle-admin-extras.php:472
+msgctxt "Plugin installer: Tab name in installer toolbar"
+msgid "deckerweb Plugins"
+msgstr ""
+
+#: includes/admin/gle-admin-extras.php:478
+msgctxt "Plugin installer: Page title"
+msgid "deckerweb Plugins"
+msgstr ""
+
+#: includes/admin/gle-admin-extras.php:483
+msgid ""
+"Great helper tools for Site Builders to save time and get more productive"
+msgstr ""
+
+#: includes/admin/gle-admin-extras.php:486
+#, php-format
+msgid "You can use any of our free plugins or premium plugins from %s"
+msgstr ""
+
+#: includes/admin/gle-admin-extras.php:490
+msgid "Join our Newsletter"
+msgstr ""
+
+#: includes/admin/gle-admin-extras.php:492
+msgid "Facebook User Group"
+msgstr ""
+
+#: includes/admin/gle-admin-functions.php:147
 msgid "Genesis Default"
 msgstr ""
 
-#: includes/admin/gle-admin-functions.php:155
+#: includes/admin/gle-admin-functions.php:157
 msgid "Alternate layouts via plugin"
 msgstr ""
 
-#: includes/admin/gle-admin-functions.php:162
+#: includes/admin/gle-admin-functions.php:164
 msgid "Custom layouts:"
 msgstr ""
 
-#: includes/admin/gle-admin-functions.php:196
+#: includes/admin/gle-admin-functions.php:198
 #: includes/admin/views/gle-admin-help.php:241
 msgid "Content-Sidebar"
 msgstr ""
 
-#: includes/admin/gle-admin-functions.php:207
+#: includes/admin/gle-admin-functions.php:209
 #: includes/admin/views/gle-admin-help.php:251
 msgid "Sidebar-Content"
 msgstr ""
 
-#: includes/admin/gle-admin-functions.php:218
+#: includes/admin/gle-admin-functions.php:220
 #: includes/admin/views/gle-admin-help.php:261
 msgid "Content-Sidebar-Sidebar"
 msgstr ""
 
-#: includes/admin/gle-admin-functions.php:229
+#: includes/admin/gle-admin-functions.php:231
 #: includes/admin/views/gle-admin-help.php:271
 msgid "Sidebar-Sidebar-Content"
 msgstr ""
 
-#: includes/admin/gle-admin-functions.php:240
+#: includes/admin/gle-admin-functions.php:242
 #: includes/admin/views/gle-admin-help.php:281
 msgid "Sidebar-Content-Sidebar"
 msgstr ""
 
-#: includes/admin/gle-admin-functions.php:251
+#: includes/admin/gle-admin-functions.php:253
 #: includes/admin/views/gle-admin-help.php:211
 #: includes/admin/views/gle-admin-help.php:221
 #: includes/admin/views/gle-admin-help.php:231
 msgid "Full Width Content"
 msgstr ""
 
-#: includes/admin/gle-admin-functions.php:279
+#: includes/admin/gle-admin-functions.php:281
 #: includes/admin/gle-admin-options.php:575
 #: includes/admin/gle-admin-options.php:623
 #: includes/admin/gle-admin-options.php:640
@@ -190,21 +241,21 @@ msgstr ""
 msgid "Sidebars below Content"
 msgstr ""
 
-#: includes/admin/gle-admin-functions.php:290
+#: includes/admin/gle-admin-functions.php:292
 #: includes/admin/gle-admin-options.php:579
 #: includes/admin/views/gle-admin-help.php:218
 #: includes/gle-layout-extras.php:81
 msgid "Primary below Content"
 msgstr ""
 
-#: includes/admin/gle-admin-functions.php:301
+#: includes/admin/gle-admin-functions.php:303
 #: includes/admin/gle-admin-options.php:582
 #: includes/admin/views/gle-admin-help.php:228
 #: includes/gle-layout-extras.php:91
 msgid "Primary above Content"
 msgstr ""
 
-#: includes/admin/gle-admin-functions.php:312
+#: includes/admin/gle-admin-functions.php:314
 #: includes/admin/gle-admin-options.php:586
 #: includes/admin/gle-admin-options.php:684
 #: includes/admin/views/gle-admin-help.php:288
@@ -212,7 +263,7 @@ msgstr ""
 msgid "Header+Nav/Content/Sidebar"
 msgstr ""
 
-#: includes/admin/gle-admin-functions.php:323
+#: includes/admin/gle-admin-functions.php:325
 #: includes/admin/gle-admin-options.php:592
 #: includes/admin/gle-admin-options.php:623
 #: includes/admin/views/gle-admin-help.php:238
@@ -220,7 +271,7 @@ msgstr ""
 msgid "Content/Sidebar-Alt"
 msgstr ""
 
-#: includes/admin/gle-admin-functions.php:334
+#: includes/admin/gle-admin-functions.php:336
 #: includes/admin/gle-admin-options.php:595
 #: includes/admin/gle-admin-options.php:623
 #: includes/admin/views/gle-admin-help.php:248
@@ -228,42 +279,37 @@ msgstr ""
 msgid "Sidebar-Alt/Content"
 msgstr ""
 
-#: includes/admin/gle-admin-functions.php:345
+#: includes/admin/gle-admin-functions.php:347
 #: includes/admin/gle-admin-options.php:599
 #: includes/admin/views/gle-admin-help.php:258
 #: includes/gle-layout-extras.php:147
 msgid "Content/Sidebar-Alt/Sidebar"
 msgstr ""
 
-#: includes/admin/gle-admin-functions.php:356
+#: includes/admin/gle-admin-functions.php:358
 #: includes/admin/gle-admin-options.php:602
 #: includes/admin/views/gle-admin-help.php:268
 #: includes/gle-layout-extras.php:157
 msgid "Sidebar/Sidebar-Alt/Content"
 msgstr ""
 
-#: includes/admin/gle-admin-functions.php:368
+#: includes/admin/gle-admin-functions.php:370
 #: includes/admin/gle-admin-options.php:605
 #: includes/admin/views/gle-admin-help.php:278
 #: includes/gle-layout-extras.php:167
 msgid "Sidebar/Content/Sidebar-Alt"
 msgstr ""
 
-#: includes/admin/gle-admin-functions.php:392
-#: includes/admin/views/gle-admin-help.php:115
-msgid "Plugin"
-msgstr ""
-
-#: includes/admin/gle-admin-functions.php:493
+#: includes/admin/gle-admin-functions.php:495
 msgid "Save"
 msgstr ""
 
-#: includes/admin/gle-admin-functions.php:501
+#: includes/admin/gle-admin-functions.php:503
 #: includes/admin/gle-admin-options.php:49
 msgid "Save Settings"
 msgstr ""
 
-#: includes/admin/gle-admin-functions.php:781
+#: includes/admin/gle-admin-functions.php:798
 msgid "A great Plugin for Site Builders:"
 msgstr ""
 

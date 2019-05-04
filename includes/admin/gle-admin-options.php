@@ -324,7 +324,7 @@ class DDW_GLE_Plugin_Settings extends Genesis_Admin_Boxes {
 			);
 
 			/** Include plugin code part */
-			require_once( GLE_PLUGIN_DIR . 'includes/admin/views/gle-admin-options-plugins.php' );
+			require_once GLE_PLUGIN_DIR . 'includes/admin/views/gle-admin-options-plugins.php';
 
 		}  // end if CPT checks
 
@@ -336,7 +336,7 @@ class DDW_GLE_Plugin_Settings extends Genesis_Admin_Boxes {
 			/** For StudioPress */
 			if ( function_exists( 'minimum_portfolio_post_type' ) || function_exists( 'executive_portfolio_post_type' ) ) {
 
-				require_once( GLE_PLUGIN_DIR . 'includes/admin/views/gle-admin-options-studiopress.php' );
+				require_once GLE_PLUGIN_DIR . 'includes/admin/views/gle-admin-options-studiopress.php';
 
 				$gle_theme_check = 'ddw_genesis_layout_extras_box_studiopress';
 
@@ -345,7 +345,7 @@ class DDW_GLE_Plugin_Settings extends Genesis_Admin_Boxes {
 			/** For Themedy brand */
 			elseif ( ddw_gle_supported_themedy() ) {
 
-				require_once( GLE_PLUGIN_DIR . 'includes/admin/views/gle-admin-options-themedy.php' );
+				require_once GLE_PLUGIN_DIR . 'includes/admin/views/gle-admin-options-themedy.php';
 
 				$gle_theme_check = 'ddw_genesis_layout_extras_box_themedy';
 
@@ -358,7 +358,7 @@ class DDW_GLE_Plugin_Settings extends Genesis_Admin_Boxes {
 					|| function_exists( 'zp_home_slider' )
 			) {
 
-				require_once( GLE_PLUGIN_DIR . 'includes/admin/views/gle-admin-options-zigzagpress.php' );
+				require_once GLE_PLUGIN_DIR . 'includes/admin/views/gle-admin-options-zigzagpress.php';
 
 				$gle_theme_check = 'ddw_genesis_layout_extras_box_zigzagpress';
 
@@ -1143,7 +1143,7 @@ class DDW_GLE_Plugin_Settings extends Genesis_Admin_Boxes {
 				)
 			);
 
-			require_once( GLE_PLUGIN_DIR . 'includes/admin/views/gle-admin-help-plugins.php' );
+			require_once GLE_PLUGIN_DIR . 'includes/admin/views/gle-admin-help-plugins.php';
 
 		}  // end if
 
@@ -1162,7 +1162,7 @@ class DDW_GLE_Plugin_Settings extends Genesis_Admin_Boxes {
 				/** StudioPress function slug part */
 				$gle_child_theme_help = 'studiopress';
 
-				require_once( GLE_PLUGIN_DIR . 'includes/admin/views/gle-admin-help-' . $gle_child_theme_help . '.php' );
+				require_once GLE_PLUGIN_DIR . 'includes/admin/views/gle-admin-help-' . $gle_child_theme_help . '.php';
 
 			}
 
@@ -1174,7 +1174,7 @@ class DDW_GLE_Plugin_Settings extends Genesis_Admin_Boxes {
 				/** Themedy function slug part */
 				$gle_child_theme_help = 'themedy';
 
-				require_once( GLE_PLUGIN_DIR . 'includes/admin/views/gle-admin-help-' . $gle_child_theme_help . '.php' );
+				require_once GLE_PLUGIN_DIR . 'includes/admin/views/gle-admin-help-' . $gle_child_theme_help . '.php';
 
 			}  // end if child theme themedy check
 
@@ -1184,7 +1184,7 @@ class DDW_GLE_Plugin_Settings extends Genesis_Admin_Boxes {
 				/** ZigZagPress function slug part */
 				$gle_child_theme_help = 'zigzagpress';
 
-				require_once( GLE_PLUGIN_DIR . 'includes/admin/views/gle-admin-help-' . $gle_child_theme_help . '.php' );
+				require_once GLE_PLUGIN_DIR . 'includes/admin/views/gle-admin-help-' . $gle_child_theme_help . '.php';
 
 			}  // end if child theme zigzagpress check
 
@@ -1194,7 +1194,7 @@ class DDW_GLE_Plugin_Settings extends Genesis_Admin_Boxes {
 				|| 'zigzagpress' == $gle_child_theme_help
 			) {
 
-				require_once( GLE_PLUGIN_DIR . 'includes/admin/views/gle-admin-help-' . $gle_child_theme_help . '.php' );
+				require_once GLE_PLUGIN_DIR . 'includes/admin/views/gle-admin-help-' . $gle_child_theme_help . '.php';
 
 				$screen->add_help_tab(
 					array(

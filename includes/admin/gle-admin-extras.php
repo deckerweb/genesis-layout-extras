@@ -15,9 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 /**
  * Add "Settings" link to plugin page
  *
- * @since  1.0.0
+ * @since 1.0.0
  *
- * @param  array $gle_links (Default) Array of plugin action links.
+ * @param array $gle_links (Default) Array of plugin action links.
  * @return array Array of link markup/ strings of plugin action links.
  */
 function ddw_gle_settings_page_link( $gle_links ) {
@@ -47,11 +47,11 @@ add_filter( 'plugin_row_meta', 'ddw_gle_plugin_links', 10, 2 );
 /**
  * Add various support links to plugin page
  *
- * @since  1.1.0
- * @since  2.1.0 Refactoring.
+ * @since 1.1.0
+ * @since 2.1.0 Refactoring.
  *
- * @param  array  $gle_links (Default) Array of plugin meta links
- * @param  string $gle_file  Path of base plugin file.
+ * @param array  $gle_links (Default) Array of plugin meta links
+ * @param string $gle_file  Path of base plugin file.
  * @return array $gle_links Array of plugin link strings to build HTML markup.
  */
 function ddw_gle_plugin_links( $gle_links, $gle_file ) {
@@ -109,11 +109,11 @@ add_filter( 'admin_footer_text', 'ddw_gle_admin_footer_text' );
  * Modifies the "Thank you" text displayed in the WP Admin footer.
  *   Fired by 'admin_footer_text' filter.
  *
- * @since  2.1.0
+ * @since 2.1.0
  *
- * @uses   genesis_is_menu_page()
+ * @uses genesis_is_menu_page()
  *
- * @param  string $footer_text The content that will be printed.
+ * @param string $footer_text The content that will be printed.
  * @return string The content that will be printed.
  */
 function ddw_gle_admin_footer_text( $footer_text ) {
@@ -146,13 +146,114 @@ function ddw_gle_admin_footer_text( $footer_text ) {
 }  // end function
 
 
+add_filter( 'debug_information', 'ddw_gle_site_health_add_debug_info', 12 );
+/**
+ * Add additional plugin related info to the Site Health Debug Info section.
+ *   (Only relevant for WordPress 5.2 or higher)
+ *
+ * @link https://make.wordpress.org/core/2019/04/25/site-health-check-in-5-2/
+ *
+ * @since 2.1.2
+ *
+ * @param array $debug_info Array holding all Debug Info items.
+ * @return array Modified array of Debug Info.
+ */
+function ddw_gle_site_health_add_debug_info( $debug_info ) {
+
+	/** Add our Debug info */
+	$debug_info[ 'genesis-layout-extras' ] = array(
+		'label'  => esc_html__( 'Genesis Layout Extras', 'genesis-layout-extras' ) . ' (' . esc_html__( 'Plugin', 'genesis-layout-extras' ) . ')',
+		'fields' => array(
+			'gle_plugin_version' => array(
+				'label' => __( 'Plugin version', 'genesis-layout-extras' ),
+				'value' => GLE_PLUGIN_VERSION,
+			),
+			'current_active_integrations' => array(
+				'label' => __( 'Genesis Default Layout', 'genesis-layout-extras' ),
+				'value' => get_option( 'genesis-settings', 'content-sidebar' )[ 'site_layout' ],
+			),
+		),
+	);
+
+	/** Return modified Debug Info array */
+	return $debug_info;
+
+}  // end function
+
+
+if ( ! function_exists( 'ddw_wp_site_health_remove_percentage' ) ) :
+
+	add_action( 'admin_head', 'ddw_wp_site_health_remove_percentage', 100 );
+	/**
+	 * Remove the "Percentage Progress" display in Site Health feature as this will
+	 *   get users obsessed with fullfilling a 100% where there are non-problems!
+	 *
+	 * @link https://make.wordpress.org/core/2019/04/25/site-health-check-in-5-2/
+	 *
+	 * @since 2.1.2
+	 */
+	function ddw_wp_site_health_remove_percentage() {
+
+		/** Bail early if not on WP 5.2+ */
+		if ( version_compare( $GLOBALS[ 'wp_version' ], '5.2-beta', '<' ) ) {
+			return;
+		}
+
+		?>
+			<style type="text/css">
+				.site-health-progress {
+					display: none;
+				}
+			</style>
+		<?php
+
+	}  // end function
+
+endif;
+
+
+if ( ! function_exists( 'ddw_genesis_tweak_plugins_submenu' ) ) :
+
+	add_action( 'admin_menu', 'ddw_genesis_tweak_plugins_submenu', 11 );
+	/**
+	 * Add Genesis submenu redirecting to "genesis" plugin search within the
+	 *   WordPress.org Plugin Directory. For Genesis 2.10.0 or higher this
+	 *   replaces the "Genesis Plugins" submenu which only lists plugins from
+	 *   StudioPress - but there are many more from the community.
+	 *
+	 * @since 2.1.2
+	 *
+	 * @uses remove_submenu_page()
+	 * @uses add_submenu_page()
+	 */
+	function ddw_genesis_tweak_plugins_submenu() {
+
+		/** Remove the StudioPress plugins submenu */
+		if ( class_exists( 'Genesis_Admin_Plugins' ) ) {
+			remove_submenu_page( 'genesis', 'genesis-plugins' );
+		}
+
+		/** Add a Genesis community plugins submenu */
+		add_submenu_page(
+			'genesis',
+			esc_html__( 'Genesis Plugins from the Plugin Directory', 'genesis-layout-extras' ),
+			esc_html__( 'Genesis Plugins', 'genesis-layout-extras' ),
+			'install_plugins',
+			esc_url( network_admin_url( 'plugin-install.php?s=genesis&tab=search&type=term' ) )
+		);
+
+	}  // end function
+
+endif;
+
+
 /**
  * Inline CSS fix for Plugins page update messages.
  *
  * @since 2.1.0
  *
- * @see   ddw_gle_plugin_update_message()
- * @see   ddw_gle_multisite_subsite_plugin_update_message()
+ * @see ddw_gle_plugin_update_message()
+ * @see ddw_gle_multisite_subsite_plugin_update_message()
  */
 function ddw_gle_plugin_update_message_style_tweak() {
 
@@ -174,10 +275,10 @@ add_action( 'in_plugin_update_message-' . GLE_PLUGIN_BASEDIR . 'genesis-layout-e
  *   Note: This action fires for regular single site installs, and for Multisite
  *         installs where the plugin is activated Network-wide.
  *
- * @since  2.1.0
+ * @since 2.1.0
  *
- * @param  object $data
- * @param  object $response
+ * @param object $data
+ * @param object $response
  * @return string Echoed string and markup for the plugin's upgrade/update
  *                notice.
  */
@@ -203,10 +304,10 @@ add_action( 'after_plugin_row_wp-' . GLE_PLUGIN_BASEDIR . 'genesis-layout-extras
  *   Note: This action fires for Multisite installs where the plugin is
  *         activated on a per site basis.
  *
- * @since  2.1.0
+ * @since 2.1.0
  *
- * @param  string $file
- * @param  object $plugin
+ * @param string $file
+ * @param object $plugin
  * @return string Echoed string and markup for the plugin's upgrade/update
  *                notice.
  */
@@ -244,10 +345,10 @@ add_filter( 'ddwlib_plir/filter/plugins', 'ddw_gle_register_plugin_recommendatio
  *   Note: The top-level array keys are plugin slugs from the WordPress.org
  *         Plugin Directory.
  *
- * @since  2.1.0
+ * @since 2.1.0
  *
- * @param  array $plugins Array holding all plugin recommendations, coming from
- *                        the class and the filter.
+ * @param array $plugins Array holding all plugin recommendations, coming from
+ *                       the class and the filter.
  * @return array Filtered and merged array of all plugin recommendations.
  */
 function ddw_gle_register_plugin_recommendations( array $plugins ) {
@@ -347,9 +448,10 @@ if ( ! function_exists( 'ddwlib_plir_strings_plugin_installer' ) ) :
 	 *    - "Newest" --> tab in plugin installer toolbar
 	 *    - "Version:" --> label in plugin installer plugin card
 	 *
-	 * @since  2.1.0
+	 * @since 2.1.0
+	 * @since 2.1.2 Added new strings.
 	 *
-	 * @param  array $strings Holds all filterable strings of the library.
+	 * @param array $strings Holds all filterable strings of the library.
 	 * @return array Array of tweaked translateable strings.
 	 */
 	function ddwlib_plir_strings_plugin_installer( $strings ) {
@@ -366,6 +468,29 @@ if ( ! function_exists( 'ddwlib_plir_strings_plugin_installer' ) ) :
 			'genesis-layout-extras'
 		);
 
+		$strings[ 'ddwplugins_tab' ] = _x(
+			'deckerweb Plugins',
+			'Plugin installer: Tab name in installer toolbar',
+			'genesis-layout-extras'
+		);
+
+		$strings[ 'tab_title' ] = _x(
+			'deckerweb Plugins',
+			'Plugin installer: Page title',
+			'genesis-layout-extras'
+		);
+
+		$strings[ 'tab_slogan' ] = __( 'Great helper tools for Site Builders to save time and get more productive', 'genesis-layout-extras' );
+
+		$strings[ 'tab_info' ] = sprintf(
+			__( 'You can use any of our free plugins or premium plugins from %s', 'genesis-layout-extras' ),
+			'<a href="https://deckerweb-plugins.com/" target="_blank" rel="nofollow noopener noreferrer">' . $strings[ 'tab_title' ] . '</a>'
+		);
+
+		$strings[ 'tab_newsletter' ] = __( 'Join our Newsletter', 'genesis-layout-extras' );
+
+		$strings[ 'tab_fbgroup' ] = __( 'Facebook User Group', 'genesis-layout-extras' );
+
 		return $strings;
 
 	}  // end function
@@ -373,4 +498,4 @@ if ( ! function_exists( 'ddwlib_plir_strings_plugin_installer' ) ) :
 endif;  // function check
 	
 /** Include class DDWlib Plugin Installer Recommendations */
-require_once( GLE_PLUGIN_DIR . 'includes/admin/classes/ddwlib-plugin-installer-recommendations.php' );
+require_once GLE_PLUGIN_DIR . 'includes/admin/classes/ddwlib-plir/ddwlib-plugin-installer-recommendations.php';

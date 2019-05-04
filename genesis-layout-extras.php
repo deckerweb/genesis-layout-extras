@@ -14,7 +14,7 @@
  * Plugin Name:  Genesis Layout Extras
  * Plugin URI:   https://github.com/deckerweb/genesis-layout-extras/
  * Description:  For Genesis Framework: Allows modifying of default layouts for homepage, various archive, attachment, search, 404 and even bbPress 2.x pages via plugin settings page. Plus: up to 9 alternate layout options as well as additional post type support!
- * Version:      2.1.1
+ * Version:      2.1.2
  * Author:       David Decker - DECKERWEB
  * Author URI:   https://deckerweb.de/
  * License:      GPL-2.0-or-later
@@ -60,8 +60,8 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @since 1.0.0
  */
 /** Plugin version */
-define( 'GLE_PLUGIN_VERSION', '2.1.1' );
-define( 'GLE_RELEASE_DATE', strtotime( '19 December 2018' ) );
+define( 'GLE_PLUGIN_VERSION', '2.1.2' );
+define( 'GLE_RELEASE_DATE', strtotime( '3 May 2019' ) );
 
 /** Plugin directory */
 define( 'GLE_PLUGIN_DIR', trailingslashit( dirname( __FILE__ ) ) );
@@ -232,27 +232,27 @@ function ddw_genesis_layout_extras_init() {
 	}
 
 	/** Conditionals functions */
-	require_once( GLE_PLUGIN_DIR . 'includes/gle-functions-conditionals.php' );
+	require_once GLE_PLUGIN_DIR . 'includes/gle-functions-conditionals.php';
 
 	/** Global functions */
-	require_once( GLE_PLUGIN_DIR . 'includes/gle-functions-global.php' );
+	require_once GLE_PLUGIN_DIR . 'includes/gle-functions-global.php';
 
 	/** Layout extras */
-	require_once( GLE_PLUGIN_DIR . 'includes/gle-layout-extras.php' );
+	require_once GLE_PLUGIN_DIR . 'includes/gle-layout-extras.php';
 
 	/** Load admin and frontend functions only when needed */
 	if ( is_admin() && ddw_gle_is_genesis_active() ) {
 		
 		/** Include plugin code parts */
-		require_once( GLE_PLUGIN_DIR . 'includes/admin/gle-admin-functions.php' );
-				//require_once( GLE_PLUGIN_DIR . '/includes/gle-admin-functions-dropdown.php' );
-		require_once( GLE_PLUGIN_DIR . 'includes/admin/gle-admin-extras.php' );
-		require_once( GLE_PLUGIN_DIR . 'includes/admin/views/gle-admin-help.php' );
+		require_once GLE_PLUGIN_DIR . 'includes/admin/gle-admin-functions.php';
+				//require_once GLE_PLUGIN_DIR . '/includes/gle-admin-functions-dropdown.php';
+		require_once GLE_PLUGIN_DIR . 'includes/admin/gle-admin-extras.php';
+		require_once GLE_PLUGIN_DIR . 'includes/admin/views/gle-admin-help.php';
 
 	} elseif ( ddw_gle_is_genesis_active() ) {
 
 		/** This executes our settings visually */
-		require_once( GLE_PLUGIN_DIR . 'includes/gle-frontend.php' );
+		require_once GLE_PLUGIN_DIR . 'includes/gle-frontend.php';
 
 	}  // end if
 
@@ -286,7 +286,7 @@ function ddw_gle_admin_init() {
 
 	/** Load the settings & help stuff */
 	if ( is_admin() ) {
-		require_once( GLE_PLUGIN_DIR . 'includes/admin/gle-admin-options.php' );
+		require_once GLE_PLUGIN_DIR . 'includes/admin/gle-admin-options.php';
 	}
 
 }  // end function
@@ -299,4 +299,4 @@ function ddw_gle_admin_init() {
  *
  * @since 2.1.0
  */
-require_once( GLE_PLUGIN_DIR . 'includes/gle-unload-translations.php' );
+require_once GLE_PLUGIN_DIR . 'includes/gle-unload-translations.php';

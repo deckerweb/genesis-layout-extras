@@ -3,9 +3,9 @@
 **Donate link:** https://www.paypal.me/deckerweb  
 **Tags:** genesis, genesiswp, genesis framework, layout, layouts, layout manager, post, page, singular, attachment, search, taxonomoy, 404 error, 404 page, bbPress, CPT, AgentPress Listings, agentpress, deckerweb  
 **Requires at least:** 3.4 plus Genesis 1.8+  
-**Tested up to:** 5.0  
+**Tested up to:** 5.2  
 **Requires PHP:** 5.6  
-**Stable tag:** 2.1.1  
+**Stable tag:** 2.1.2  
 **License:** GPL-2.0-or-later  
 **License URI:** https://opensource.org/licenses/GPL-2.0  
 
@@ -71,10 +71,10 @@ As a smart bonus the plugin also includes the layout setting for the *bbPress 2.
 * Child Theme: **Stage** by Themedy Themes: Taxonomy "Photo Galleries"
 
 
-### ⚡️ Translations 
-* English (United States) - `en_US` = default, always included
-* [German (informal, default)](https://translate.wordpress.org/locale/de/default/wp-plugins/genesis-layout-extras) - `de_DE`
-* [German (formal)](https://translate.wordpress.org/locale/de/formal/wp-plugins/genesis-layout-extras) - `de_DE_formal`
+### 🌎 Translations 
+* 🇺🇸 English (United States) - `en_US` = default, always included
+* 🇩🇪 [German (informal, default)](https://translate.wordpress.org/locale/de/default/wp-plugins/genesis-layout-extras) - `de_DE`
+* 🇩🇪 [German (formal)](https://translate.wordpress.org/locale/de/formal/wp-plugins/genesis-layout-extras) - `de_DE_formal`
 * All other user-submitted translation see at [language packs overview page](https://translate.wordpress.org/projects/wp-plugins/genesis-layout-extras)
 * `.pot` file (`genesis-layout-extras.pot`) for translators is also always included :)
 * Easy plugin translation platform with GlotPress tool: [Translate "Genesis Layout Extras"...](https://translate.wordpress.org/projects/wp-plugins/genesis-layout-extras)
@@ -93,9 +93,10 @@ You can also contribute code-wise via our [Genesis Layout Extras GitHub Reposito
 
 
 ### 😁 Liked Genesis Layout Extras Plugin? 
-* [**Join our Newsletter for Site Builders**](https://eepurl.com/gbAUUn) - *get plugin insider info, and more interesting stuff for Genesis WordPress users*
-* Engage in our [Facebook Community User Group]((https://www.facebook.com/groups/deckerweb.wordpress.plugins/).
-* Rate us [5 stars on WordPress](https://wordpress.org/support/plugin/genesis-layout-extras/reviews/?filter=5/#new-post) :)
+* [**Rate us 5 ⭐ stars on WordPress.org**](https://wordpress.org/support/plugin/genesis-layout-extras/reviews/?filter=5/#new-post) :)
+* [**Join our Newsletter for Site Builders** 💯](https://eepurl.com/gbAUUn) - *get plugin insider info, and more interesting stuff for Genesis WordPress users*
+* Engage in our [Facebook Community User Group 💬]((https://www.facebook.com/groups/deckerweb.wordpress.plugins/).
+* [**Become a Patron** 💜](https://www.patreon.com/deckerweb) and support ongoing development, maintenance and support of this plugin
 
 
 ### ♥ This Plugin ... 
@@ -112,7 +113,7 @@ Try [**Toolbar Extras for Genesis**](https://toolbarextras.com/) my other great 
 * In your WordPress admin dashboard search for `toolbar extras` in the plugin installer ;-)
 
 
-### 🔌 Check out my other Genesis Plugins 
+## 🔌 Check out my other Genesis Plugins 
 * [**Genesis Widgetized Not Found & 404**](https://wordpress.org/plugins/genesis-widgetized-notfound/) - be prepared for the edge cases
 * [**Genesis What's New Info**](https://wordpress.org/plugins/genesis-whats-new-info/) - show the what's new overview page via left-hand admin menu
 * [**Genesis Extra Settings Transporter**](https://wordpress.org/plugins/genesis-extra-settings-transporter/) - addionally export Genesis specific plugin & child theme settings
@@ -124,14 +125,18 @@ Try [**Toolbar Extras for Genesis**](https://toolbarextras.com/) my other great 
 * [Genesis Widgetized Archive](https://wordpress.org/plugins/genesis-widgetized-archive/) - easily set up content for your Archive page (template)
 * [Genesis Widgetized Footer](https://wordpress.org/plugins/genesis-widgetized-footer/) - easily set up your copyright/ credits/ back to top
 * [Genesis Connect for Easy Digital Downloads](https://wordpress.org/plugins/genesis-connect-edd/) - plugin for easy & elegant integration
+* [*My Genesis plugins newsletter*](https://eepurl.com/gbAUUn)
 
 
 ## 🔌 My Other WordPress Plugins 
 * [**Toolbar Extras for Genesis & Elementor - WordPress Admin Bar Enhanced**](https://wordpress.org/plugins/toolbar-extras/)
+* [**Toolbar Extras for Oxygen Builder - Add-On plugin**](https://wordpress.org/plugins/toolbar-extras-oxygen/)
 * [**Builder Template Categories - for WordPress Page Builders**](https://wordpress.org/plugins/builder-template-categories/)
 * [**Polylang Connect for Elementor – Language Switcher & Template Tweaks**](https://wordpress.org/plugins/connect-polylang-elementor/)
+* [**Simple Download Manager for WP Document Revisions**](https://wordpress.org/plugins/wpdr-simple-downloads/)
 * [Multisite Toolbar Additions](https://wordpress.org/plugins/multisite-toolbar-additions/)
 * [Cleaner Plugin Installer](https://wordpress.org/plugins/cleaner-plugin-installer/)
+* [*My plugins newsletter*](https://eepurl.com/gbAUUn)
 
 
 ## Installation 
@@ -148,7 +153,7 @@ Try [**Toolbar Extras for Genesis**](https://toolbarextras.com/) my other great 
 
 ### 🚀 We Recommend Your Host Supports at least: 
 
-* PHP version 7.0 or higher
+* PHP version 7.2 or higher
 * MySQL version 5.6 or higher / or MariaDB 10 or higher
 
 
@@ -443,6 +448,14 @@ Last but not least, **Special Thanks go out to my family** for allowing me to do
 **NOTE for the extra Layouts** The up to nine *additional* layouts added with version 2.0.0 of the plugin back in 2013 are now deprecated as of December 2018. That means, they will NOT receive any more updates and also NO SUPPORT. You can still use them if you want but you need to care for the proper styling, displaying etc. yourself. Therefore it would make more sense for you to not use these option from the plugin but rather register custom layouts yourself and make use of our filters to bring them also into the settings drop-down field. Thanks for your understanding! - This note only regards the *additional layouts*, NOT the plugin itself of course, the plugin is alive and kickin', hehe :-).
 
 
+### ⚡️ 2.1.2 - 2019-05-03
+* *New: Successfully tested with WordPress 5.2*
+* New: Integrated with WordPress 5.2+ new Site Health feature: Genesis Layout Extras now has an extra section on the Debug Info tab - this is especially helpful for support requests
+* Tweak: Updated bundled library DDWlib Plugin Installer Recommendations to latest version (v1.4.0) - feature updates
+* Tweak: Updated `.pot` file plus all German translations (formal, informal) and language packs
+* New: [Join my newsletter for DECKERWEB WordPress Plugins](https://eepurl.com/gbAUUn) - insider info, plus tutorials and more useful stuff
+
+
 ### 🔧 2.1.1 - 2018-12-19
 * Tweak: Fixed Fatal error caused from setting field creation function - thanks to user Pete for reporting it!
 * Tweak: Fixed Admin styling glitches with Ninja Forms builder (and most likely other plugins) - Thanks to user feedback ([Topic](https://wordpress.org/support/topic/css-error-when-combined-with-ninja-forms/))
@@ -602,6 +615,10 @@ NEW: Added support for more custom post type by plugins:
 
 
 ## Upgrade Notice 
+
+
+### 2.1.2 
+Now with WordPress 5.2 Site Health integration first pass. - **Update highly recommended!**
 
 
 ### 2.1.1 
